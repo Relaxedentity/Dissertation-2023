@@ -61,6 +61,7 @@ protected:
 	virtual void	Resize(int x, int y);	
 	void			UpdateShaderMatrices();
 	void			UpdateNodeShaderMatrices();
+	void			UpdateRayTraceShaderMatrices();
 	void			BindShader(Shader*s);
 	void			SetTextureRepeating(GLuint target, bool state);
 	void			SetShaderLight(const Light& l);
@@ -78,6 +79,10 @@ protected:
 	Matrix4 viewMatrix;		//View matrix
 	Matrix4 textureMatrix;	//Texture matrix
 	Matrix4 shadowMatrix;
+	Matrix4 cubeModelMatrix;
+	Matrix4 cubeModelMatrix2;
+	Matrix4 cubeModelMatrix3;
+	Matrix4 cubeModelMatrix4;
 
 	int		width;			//Render area width (not quite the same as window width)
 	int		height;			//Render area height (not quite the same as window height)

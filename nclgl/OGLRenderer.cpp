@@ -211,6 +211,19 @@ void OGLRenderer::UpdateShaderMatrices()	{
 		glUniformMatrix4fv(glGetUniformLocation(currentShader->GetProgram(), "shadowMatrix")  , 1,false, shadowMatrix.values);
 	}
 }
+void OGLRenderer::UpdateRayTraceShaderMatrices() {
+	if (currentShader) {
+		glUniformMatrix4fv(glGetUniformLocation(currentShader->GetProgram(), "modelMatrix"), 1, false, modelMatrix.values);
+		glUniformMatrix4fv(glGetUniformLocation(currentShader->GetProgram(), "cubeModelMatrix"), 1, false, cubeModelMatrix.values);
+		glUniformMatrix4fv(glGetUniformLocation(currentShader->GetProgram(), "cubeModelMatrix2"), 1, false, cubeModelMatrix2.values);
+		glUniformMatrix4fv(glGetUniformLocation(currentShader->GetProgram(), "cubeModelMatrix3"), 1, false, cubeModelMatrix3.values);
+		glUniformMatrix4fv(glGetUniformLocation(currentShader->GetProgram(), "cubeModelMatrix4"), 1, false, cubeModelMatrix4.values);
+		glUniformMatrix4fv(glGetUniformLocation(currentShader->GetProgram(), "viewMatrix"), 1, false, viewMatrix.values);
+		glUniformMatrix4fv(glGetUniformLocation(currentShader->GetProgram(), "projMatrix"), 1, false, projMatrix.values);
+		glUniformMatrix4fv(glGetUniformLocation(currentShader->GetProgram(), "textureMatrix"), 1, false, textureMatrix.values);
+		glUniformMatrix4fv(glGetUniformLocation(currentShader->GetProgram(), "shadowMatrix"), 1, false, shadowMatrix.values);
+	}
+}
 
 void OGLRenderer::UpdateNodeShaderMatrices() {
 	if (currentShader) {

@@ -18,8 +18,8 @@ void main(void) {
 	vec4 diffuse = texture(diffuseTex , IN.texCoord );
 	vec3 viewDir = normalize(cameraPos - IN.worldPos );
 
-	vec3 reflectDir = reflect(-viewDir ,normalize(IN.normal ));
+	vec3 reflectDir = reflect(-viewDir ,normalize(IN.normal));
 	vec4 reflectTex = texture(cubeTex ,reflectDir );
 
-	fragColour = reflectTex + (diffuse * 0.25f);
+	fragColour = reflectTex;
 }

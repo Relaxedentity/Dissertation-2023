@@ -22,6 +22,12 @@ int main() {
 		if (Window::GetKeyboard()->KeyDown(KEYBOARD_F5)) {
 			Shader::ReloadAllShaders();
 		}
+		if (Window::GetKeyboard()->KeyDown(KEYBOARD_E)) {
+			w.LockMouseToWindow(false);
+		}
+		if (Window::GetKeyboard()->KeyDown(KEYBOARD_R)) {
+			w.LockMouseToWindow(true);
+		}
 	}
 
 	return 0;

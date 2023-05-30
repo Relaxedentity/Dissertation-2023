@@ -1,0 +1,2 @@
+﻿nclgl.lib(Mouse.obj) : warning LNK4204: 'H:\Downloads\CSC8502 2022\x64\Debug\nclgl.pdb' is missing debugging information for referencing module; linking object as if no debug info
+  Tutorial3.vcxproj -> H:\Downloads\CSC8502 2022\x64\Debug\Tutorial 03 - Texturing.exe
